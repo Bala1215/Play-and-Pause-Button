@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play and Pause Button </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="container">
+       <!-- <div class="navbar">
+        <img src="music-note.png">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Specifications</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+        </div>
+    </div> 
+    -->
+
+    <div class="content">
+        <div class="left-col">
+            <h1>The<br> Real<br> Music</h1>
+        </div>
+        <div class="right-col">
+            <p>Click Here To Listen</p>
+            <img id="icon" src="circle-play-solid (1).svg">
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="Inkem-Inkem-Inkem-Kaavaale-MassTamilan.com.mp3" type="audio/mp3">
+    </audio>
+ 
+
+    <script>
+        let mySong = document.getElementById("mySong");
+        let icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="circle-pause-solid.svg";
+            }
+            else{
+                mySong.pause();
+                icon.src="circle-play-solid (1).svg";
+            }
+        }
+    </script>
+</body>
+</html>
